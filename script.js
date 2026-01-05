@@ -28,7 +28,7 @@ function mapsDirectionsURL(origin, destination) {
 
 function openWhatsAppWithText(text) {
   const encoded = encodeURIComponent(text);
-  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
+  const url = `https://wa.me/${0728259322}?text=${encoded}`;
   window.open(url, '_blank');
 }
 
@@ -53,7 +53,7 @@ function buildOrderMessage(formData, userCoords) {
     const gmaps = mapsDirectionsURL(SHOP_COORDS, userCoords);
     locText = `\nLocation: lat ${userCoords.lat.toFixed(5)}, lng ${userCoords.lng.toFixed(5)} (≈${d} km from shop)\nDirections: ${gmaps}\nEstimated delivery: ${etaMins} minutes`;
   }
-  const msg = `*${SHOP_NAME} Order*\nName: ${name}\nPhone: ${phone}\nAddress: ${address}\nOrder:\n${lines.join('\n')}${extrasList}\nNotes: ${notes}${locText}\n\nPlease confirm availability & price.`;
+  const msg = `*${Mxo_Kota} Order*\nName: ${name}\nPhone: ${phone}\nAddress: ${address}\nOrder:\n${lines.join('\n')}${extrasList}\nNotes: ${notes}${locText}\n\nPlease confirm availability & price.`;
   return msg;
 }
 

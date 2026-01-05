@@ -1,0 +1,105 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order | Kota Delivery</title>
+  <link rel="stylesheet" href="assets/main.css">
+  <script src="assets/config.js"></script>
+  <script src="assets/script.js"></script>
+</head>
+<body>
+<header>
+  <h1>Order with WhatsApp</h1>
+  <p>Fast checkout • We’ll confirm and share ETA</p>
+</header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="order.html">Order</a>
+  <a href="track.html">Track</a>
+</nav>
+<div class="container">
+  <form class="card" onsubmit="handleOrderSubmit(event)">
+    <div class="grid grid-2">
+      <div>
+        <label for="name">Your name</label>
+        <input id="name" name="name" required>
+      </div>
+      <div>
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" placeholder="e.g. 0812345678" required>
+      </div>
+    </div>
+    <label for="address">Address (or complex name)</label>
+    <input id="address" name="address" placeholder="Street & area">
+    <label><input type="checkbox" name="useLocation"> Use my current location for delivery</label>
+
+    <h3>Choose your items</h3>
+    <div class="grid grid-2">
+      <div>
+        <label>Classic Kota</label>
+        <input type="hidden" name="item" value="Classic Kota">
+        <select name="qty">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+      <div>
+        <label>Cheese Kota</label>
+        <input type="hidden" name="item" value="Cheese Kota">
+        <select name="qty">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+      <div>
+        <label>Chicken Kota</label>
+        <input type="hidden" name="item" value="Chicken Kota">
+        <select name="qty">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+      <div>
+        <label>Russian Kota</label>
+        <input type="hidden" name="item" value="Russian Kota">
+        <select name="qty">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+    </div>
+    <h3>Add-ons</h3>
+    <label><input type="checkbox" name="extra" value="Extra Cheese"> Extra Cheese</label>
+    <label><input type="checkbox" name="extra" value="Egg"> Egg</label>
+    <label><input type="checkbox" name="extra" value="Atchar"> Atchar</label>
+    <label><input type="checkbox" name="extra" value="Russian"> Russian</label>
+
+    <label for="notes">Notes (e.g. no salt)</label>
+    <textarea id="notes" name="notes" rows="3"></textarea>
+
+    <div style="margin-top:1rem; display:flex; gap:.75rem;">
+      <button class="btn btn-success" type="submit">Send via WhatsApp</button>
+      <a class="btn btn-primary" target="_blank" href="https://wa.me/" onclick="this.href='https://wa.me/'+WHATSAPP_NUMBER">Chat with us</a>
+    </div>
+    <small class="muted">Tip: if location sharing fails, send us your pin drop on WhatsApp.</small>
+  </form>
+</div>
+<footer>
+  <small class="muted">We deliver within <b id="radius"></b> km of the shop.</small>
+</footer>
+<script>
+  document.getElementById('radius').textContent = DELIVERY_RADIUS_KM;
+</script>
+</body>
+</html>

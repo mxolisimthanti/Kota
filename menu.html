@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu | Kota Delivery</title>
+  <link rel="stylesheet" href="assets/main.css">
+  <script src="assets/config.js"></script>
+</head>
+<body>
+<header>
+  <h1><span id="shopName"></span> Menu</h1>
+  <p>Simple, tasty, affordable.</p>
+</header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="order.html">Order</a>
+  <a href="track.html">Track</a>
+</nav>
+<div class="container">
+  <div class="card">
+    <div class="menu-item"><span>Classic Kota</span> <span>R28</span></div>
+    <div class="menu-item"><span>Cheese Kota</span> <span>R32</span></div>
+    <div class="menu-item"><span>Chicken Kota</span> <span>R38</span></div>
+    <div class="menu-item"><span>Russian Kota</span> <span>R36</span></div>
+    <div class="menu-item"><span>Fully Loaded Kota</span> <span>R45</span></div>
+    <div class="menu-item"><span>Chip Roll</span> <span>R20</span></div>
+    <h3>Add-ons</h3>
+    <div class="menu-item"><span>Extra Cheese</span> <span>R6</span></div>
+    <div class="menu-item"><span>Egg</span> <span>R6</span></div>
+    <div class="menu-item"><span>Atchar</span> <span>R4</span></div>
+    <div class="menu-item"><span>Russian</span> <span>R8</span></div>
+    <small class="muted">Prices are placeholders—edit in <span class="code">menu.html</span> to match your actual pricing.</small>
+  </div>
+  <a class="btn btn-success" href="order.html">Order now</a>
+</div>
+<footer>
+  <small class="muted">Address: <span id="address"></span></small>
+</footer>
+<script>
+  document.getElementById('shopName').textContent = SHOP_NAME;
+  document.getElementById('address').textContent = SHOP_ADDRESS;
+</script>
+</body>
+</html>

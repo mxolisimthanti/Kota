@@ -1,0 +1,48 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Kota Delivery</title>
+  <link rel="stylesheet" href="assets/main.css">
+  <script src="assets/config.js"></script>
+  <script src="assets/script.js"></script>
+</head>
+<body>
+<header>
+  <h1>Welcome to <span id="shopName"></span></h1>
+  <p>Fresh kotas delivered within <b id="radius"></b> km • Fast WhatsApp ordering</p>
+</header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="order.html">Order</a>
+  <a href="track.html">Track</a>
+</nav>
+<div class="container">
+  <div class="card">
+    <h2>How it works</h2>
+    <ol>
+      <li>Browse the <a href="menu.html">menu</a>.</li>
+      <li>Place your order on <a href="order.html">WhatsApp</a> in seconds.</li>
+      <li>We confirm & deliver (share live location on WhatsApp on request).</li>
+    </ol>
+    <a class="btn btn-success" href="order.html">Order now on WhatsApp</a>
+  </div>
+  <div class="card note">
+    <p id="distance">Allow location to see your distance & ETA.</p>
+  </div>
+</div>
+<footer>
+  <small class="muted">Address: <span id="address"></span> • WhatsApp: <span class="code">wa.me/<span id="wa"></span></span></small>
+</footer>
+<script>
+  document.getElementById('shopName').textContent = SHOP_NAME;
+  document.getElementById('radius').textContent = DELIVERY_RADIUS_KM;
+  document.getElementById('address').textContent = SHOP_ADDRESS;
+  document.getElementById('wa').textContent = WHATSAPP_NUMBER;
+  showMyDistance();
+</script>
+</body>
+</html>

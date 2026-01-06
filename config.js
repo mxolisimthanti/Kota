@@ -1,7 +1,7 @@
 
 // ====== EDIT THESE VALUES ======
 // Your WhatsApp number in international format without '+' or spaces, e.g. 27721234567
-const WHATSAPP_NUMBER = "27700000000"; // TODO: replace with your business WhatsApp number
+const WHATSAPP_NUMBER = "27728259322"; // TODO: replace with your business WhatsApp number
 
 // Your shop name and short address for display
 const SHOP_NAME = "Mxolisi Kota"; // TODO: replace with your shop name
